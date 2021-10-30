@@ -272,9 +272,9 @@ class CBitcoinAddress : public CBase58Data
 public:
     enum
     {
-        PUBKEY_ADDRESS = 48, // Scamcoin addresses start with L
+        PUBKEY_ADDRESS = 63, // Scamcoin addresses start with S
         SCRIPT_ADDRESS = 5,
-        PUBKEY_ADDRESS_TEST = 111,
+        PUBKEY_ADDRESS_TEST = 125,
         SCRIPT_ADDRESS_TEST = 196,
     };
 
