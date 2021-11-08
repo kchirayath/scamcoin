@@ -2800,7 +2800,7 @@ bool InitBlockIndex() {
             block.nTime    = 1635803843;
             block.nNonce   = 385674305;
         }
-if (true && block.GetHash() != hashGenesisBlock)
+if (false && block.GetHash() != hashGenesisBlock)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
