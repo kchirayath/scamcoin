@@ -35,7 +35,7 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0x376d34a5cdee098adf85a96b7d08a43a7dabeadb6f4971a1bcb8543bb5999772");
+uint256 hashGenesisBlock("0x78d8e5331d2dab068537483b223d79c350ca452080a291a2cbd2a1bff9595941");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // Scamcoin: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -2746,7 +2746,7 @@ bool LoadBlockIndex()
         pchMessageStart[1] = 0xa1;
         pchMessageStart[2] = 0xb5;
         pchMessageStart[3] = 0xe3;
-        hashGenesisBlock = uint256("0xa090734b491884ed3ce25f940f9da335d391659eb8091da2a378690d20886da5");
+        hashGenesisBlock = uint256("0x5e4cf48f807c03b43b341eadbe09640231f4212f7b754b89e5df3a2e739f82df");
     }
 
     //
@@ -2779,7 +2779,7 @@ bool InitBlockIndex() {
         //   vMerkleTree: 97ddfbbae6
 
         // Genesis block
-        const char* pszTimestamp = "CBC 11/01/2021 Small business owners defrauded, then left by banks to take $23k loss";
+        const char* pszTimestamp = "CBC 11/10/2021 Province could call for judicial inquiry into Ottawa's LRT";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -2791,14 +2791,14 @@ bool InitBlockIndex() {
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1635803852;
+        block.nTime    = 1636592044;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 2085726591;
+        block.nNonce   = 2086798757;
 
         if (fTestNet)
         {
-            block.nTime    = 1635803843;
-            block.nNonce   = 385674305;
+            block.nTime    = 1636592032;
+            block.nNonce   = 385722834;
         }
 if (false && block.GetHash() != hashGenesisBlock)
         {
@@ -2847,7 +2847,7 @@ if (false && block.GetHash() != hashGenesisBlock)
         printf("%s\n", hash.ToString().c_str());
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("0x8ec8c8cb2a83261f75c751a36281bdee43c4a423ca38ec609cf586cd501b30a3"));
+        assert(block.hashMerkleRoot == uint256("0xdb75ccbc6c32623aeb6eb043868f394e16837110315c808c32ae8c58d3c240ca"));
         block.print();
         assert(hash == hashGenesisBlock);
 
